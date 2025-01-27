@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<body>
+    <div class="container">
+        <h1>Gestión de Eventos</h1>
+        <div class="tabs">
+            <div class="tab active" data-tab="eventos">Eventos</div>
+            <div class="tab" data-tab="ubicaciones">Ubicaciones</div>
+            <div class="tab" data-tab="contactos">Contactos</div>
+        </div>
+
+        <div class="tab-content active" id="eventos">
+            <h2>Registrar Evento</h2>
+            <form id="event-form">
+                <div class="form-group">
+                    <label for="titulo-evento">Título</label>
+                    <input type="text" id="titulo-evento" name="titulo-evento" required>
+                </div>
+                <div class="form-group">
+                    <label for="invitados-evento">Invitados</label>
+                    <input type="text" id="invitados-evento" name="invitados-evento" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-evento">Fecha y Hora</label>
+                    <input type="datetime-local" id="fecha-evento" name="fecha-evento" required>
+                </div>
+                <div class="form-group">
+                    <label for="zona-horaria-evento">Zona Horaria</label>
+                    <input type="text" id="zona-horaria-evento" name="zona-horaria-evento" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion-evento">Descripción</label>
+                    <textarea id="descripcion-evento" name="descripcion-evento" required></textarea>
+                </div>
+                <button type="submit">Guardar Evento</button>
+            </form>
+
+            <div class="event-list" id="event-list">
+                <h3>Eventos Guardados</h3>
+            </div>
+        </div>
+
+        <div class="tab-content" id="ubicaciones">
+            <h2>Registrar Ubicación</h2>
+            <form id="ubicacion-form">
+                <div class="form-group">
+                    <label for="titulo-ubicacion">Título</label>
+                    <input type="text" id="titulo-ubicacion" name="titulo-ubicacion">
+                </div>
+                <div class="form-group">
+                    <label for="direccion-ubicacion">Dirección</label>
+                    <input type="text" id="direccion-ubicacion" name="direccion-ubicacion">
+                </div>
+                <div class="form-group">
+                    <label for="coordenadas-ubicacion">Coordenadas Geográficas</label>
+                    <input type="text" id="coordenadas-ubicacion" name="coordenadas-ubicacion">
+                </div>
+                <button type="submit">Guardar Ubicación</button>
+            </form>
+
+            <div class="ubicacion-list" id="ubicacion-list">
+                <h3>Ubicaciones Guardadas</h3>
+            </div>
+        </div>
+
+        <div class="tab-content" id="contactos">
+            <h2>Registrar Contacto</h2>
+            <form id="contacto-form">
+                <div class="form-group">
+                    <label for="saludo-contacto">Saludo</label>
+                    <input type="text" id="saludo-contacto" name="saludo-contacto">
+                </div>
+                <div class="form-group">
+                    <label for="nombre-contacto">Nombre Completo</label>
+                    <input type="text" id="nombre-contacto" name="nombre-contacto">
+                </div>
+                <div class="form-group">
+                    <label for="identificacion-contacto">Número de Identificación</label>
+                    <input type="text" id="identificacion-contacto" name="identificacion-contacto">
+                </div>
+                <div class="form-group">
+                    <label for="correo-contacto">Correo Electrónico</label>
+                    <input type="email" id="correo-contacto" name="correo-contacto">
+                </div>
+                <div class="form-group">
+                    <label for="telefono-contacto">Número de Teléfono</label>
+                    <input type="tel" id="telefono-contacto" name="telefono-contacto">
+                </div>
+                <div class="form-group">
+                    <label for="fotografia-contacto">Fotografía (URL)</label>
+                    <input type="url" id="fotografia-contacto" name="fotografia-contacto">
+                </div>
+                <button type="submit">Guardar Contacto</button>
+            </form>
+
+            <div class="contacto-list" id="contacto-list">
+                <h3>Contactos Guardados</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
